@@ -78,6 +78,7 @@ test(`the LoginForm should be able to validate inputs`, (assert) => {
      "The credentials are invalid" with invalid inputs`);
 
   // Fill in the form with valid credentials
+  //
   emailInput.value = `email@email.com`;
   passwordInput.value = `honeycrisp`;
   form.validateInputs();
