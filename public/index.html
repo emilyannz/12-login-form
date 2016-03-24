@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Emily's 12 Login Form</title>
-  <link rel="stylesheet" href="/app.css">
-</head>
-<body>
-<div>background-container</div>
-  <script src="/vendor.js" charset="utf-8"></script>
-  <script src="/app.js" charset="utf-8"></script>
+  <head>
+    <meta charset="utf-8">
+    <title>12 Login Form</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
 
-  <script type="text/javascript">
-    var form = document.querySelector(`.login-form`);
-    var LoginForm = require(`login-form`);
+  <body>
+    <div class="container-background">
+      <div class="top-background-white"></div>
+      <div class="bottom-background-black"></div>
+    </div>
+    <div class="brand-logo">
+      <img src="treemo-logo.png" alt="">
+    </div>
 
-    new LoginForm(form, `emilyannz@gmail.com`);
-  </script>
-</body>
+    <div class="user-login-form">
+      <form class="user-login-form user-input__container">
+        <div class="user-login-input__row">
+          <h4 class="user-login-input__label">Username</h4>
+          <input type="text" class="user-login-form__email">
+        </div>
+        <div class="user-login-input__row">
+          <h4 class="user-login-input__label">Password</h4>
+          <input type="password" class="user-login-form__password">
+        </div>
+
+        <span class="user-login-form__validation-message"></span>
+        <div class="user-login-input__save">
+          <button class="user-login-input__save-button">Sign In</button>
+        </div>
+      </form>
+
+    </div>
+    <script src="/vendor.js" charset="utf-8"></script>
+    <script src="/app.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      var form = document.querySelector(`.login-form`);
+      var LoginForm = require(`login-form`);
+      new LoginForm(form, `youremail@email.com`);
+    </script>
+  </body>
 </html>

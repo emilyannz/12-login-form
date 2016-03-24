@@ -28,7 +28,8 @@ export default class LoginForm {
     const emailInput = this.form.querySelector(`.login-form__email`).value;
     const passInput = this.form.querySelector(`.login-form__password`).value;
     const valmsg = this.form.querySelector(`.login-form__validation-message`);
-  // Run Validate
+
+   // Run Validate
     if (this.validate(emailInput, passInput)) {
       valmsg.innerText = ``;
     } else {
