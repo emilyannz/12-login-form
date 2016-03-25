@@ -55,10 +55,10 @@ test(`the LoginForm can check for valid login attempts`, (assert) => {
   const formDiff = new LoginForm(formEl, `ryan@theironyard.com`);
 
   assert.ok(formDiff.validate(`ryan@theironyard.com`, `honeycrisp`),
-    `The form should validate with email passed in to the constructor email@email.com:pandas`);
+    `The form should validate with email passed in to the constructor 'formDiff' ryan@theironyard:pandas`);
   assert.notOk(formDiff.validate(`email@email.com`, `honeycrisp`),
-    `The form should not validate with an email
-     not passed into the constructor email@email.com:pandas`);
+    `The form should not validate with an email that was
+     not passed into the constructor 'formDiff' email@email.com:pandas`);
 });
 
 test(`the LoginForm should be able to validate inputs`, (assert) => {
@@ -78,7 +78,6 @@ test(`the LoginForm should be able to validate inputs`, (assert) => {
      "The credentials are invalid" with invalid inputs`);
 
   // Fill in the form with valid credentials
-  //
   emailInput.value = `email@email.com`;
   passwordInput.value = `honeycrisp`;
   form.validateInputs();
