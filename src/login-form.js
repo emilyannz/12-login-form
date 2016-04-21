@@ -2,17 +2,18 @@
 export default class LoginForm {
 
   // "LoginForm" constructor
-  constructor(form, email) {
-    this.form = form;
+  constructor(formElement, email) {
+    this.form = formElement;
     this.userinfo = [
-    { username: `aaron@theironyard.com`, password: `password123` },
-    { username: `admin@google.com`, password: `pandas` },
-    { username: email, password: `honeycrisp` },
+      { username: `aaron@theironyard.com`, password: `password123` },
+      { username: `admin@google.com`, password: `pandas` },
+      { username: email, password: `honeycrisp` },
     ];
 
     // LoginForm listens for clicks
-    this.form.addEventListener(`click`, (ev) => {
+    this.form.addEventListener(`submit`, (ev) => {
       ev.preventDefault();
+
       this.validateInputs();
     });
   }
